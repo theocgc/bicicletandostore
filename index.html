@@ -126,18 +126,26 @@
                     </div>
                 </div>
 
-                <div class="card-blur p-8 rounded-3xl border-sky-500/30">
-                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
-                        <i class="fas fa-list-check text-sky-500"></i> O que está incluso:
-                    </h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Café da Manhã Completo</li>
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Medalha de Metal (Pós-prova)</li>
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Carro de Apoio & Hidratação</li>
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Sorteio de Brindes & Bike Aro 29</li>
-                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Fotos e Vídeos Profissionais</li>
-                    </ul>
+                <div class="relative group">
+                    <div class="card-blur p-2 rounded-3xl overflow-hidden shadow-2xl border-sky-500/20">
+                        <img src="rota.jpg" alt="Mapa da Rota" class="w-full h-auto rounded-2xl" onerror="this.src='https://placehold.co/600x400/1e293b/sky?text=Mapa+da+Rota+(rota.jpg)'">
+                    </div>
                 </div>
+            </div>
+
+            <!-- Benefícios Card -->
+            <div class="mt-12 max-w-4xl mx-auto card-blur p-8 rounded-3xl border-sky-500/30">
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                    <i class="fas fa-list-check text-sky-500"></i> O que está incluso:
+                </h3>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Café da Manhã Completo</li>
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Medalha de Metal (Pós-prova)</li>
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Carro de Apoio & Hidratação</li>
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Sorteio de Brindes & Bike Aro 29</li>
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Fotos e Vídeos Profissionais</li>
+                    <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Pulseira de Identificação</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -149,9 +157,8 @@
             <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Tecnologia TrueLife Dry que absorve a umidade e oferece proteção UV. Exclusiva para o Kit Bruto.</p>
             
             <div class="max-w-4xl mx-auto relative group">
-                <!-- IMPORTANTE: Substitua o src pelo caminho da sua imagem no seu servidor -->
                 <div class="card-blur p-4 rounded-3xl overflow-hidden shadow-2xl border-sky-500/20">
-                    <img src="05.jpeg" alt="Modelo da Camisa Oficial" class="w-full h-auto rounded-2xl transform group-hover:scale-[1.01] transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1e293b/sky?text=Sua+Imagem+Aqui+(camisa.jpg)'">
+                    <img src="camisa.jpg" alt="Modelo da Camisa Oficial" class="w-full h-auto rounded-2xl transform group-hover:scale-[1.01] transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1e293b/sky?text=Modelo+da+Camisa+(camisa.jpg)'">
                 </div>
                 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
@@ -189,7 +196,7 @@
                 <!-- Kit Básico -->
                 <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-slate-500 hover:scale-[1.02] transition-all">
                     <h3 class="text-2xl font-bold mb-2">KIT BÁSICO</h3>
-                    <div class="text-5xl font-black mb-8 italic italic">R$ 60,00</div>
+                    <div class="text-5xl font-black mb-8 italic">R$ 60,00</div>
                     
                     <ul class="space-y-4 mb-12 flex-grow text-slate-300">
                         <li class="flex items-center gap-3"><i class="fas fa-medal text-slate-500"></i> Medalha em Metal</li>
