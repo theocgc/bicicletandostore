@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3º Pedal de Aniversário - Bicicletando Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), 
+                        url('https://images.unsplash.com/photo-1541625602330-2277a4c4b28d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .card-blur {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-link:hover {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Menu de Navegação -->
+    <nav class="fixed top-0 w-full z-[100] bg-slate-900/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="font-black text-xl tracking-tighter">BICICLETANDO <span class="text-sky-500">STORE</span></div>
+            <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-wider">
+                <a href="#inicio" class="nav-link transition-colors">Início</a>
+                <a href="#percurso" class="nav-link transition-colors">Percurso</a>
+                <a href="#camisa" class="nav-link transition-colors">A Camisa</a>
+                <a href="#inscricao" class="nav-link transition-colors text-sky-400">Inscrição</a>
+            </div>
+            <a href="https://wa.me/5531997906405" target="_blank" class="bg-sky-600 text-white px-4 py-2 rounded-lg text-xs font-black uppercase hover:bg-sky-500 transition-all">
+                Contato
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero -->
+    <header id="inicio" class="hero-bg min-h-screen flex flex-col items-center justify-center text-center px-4 py-32">
+        <div class="max-w-4xl mx-auto">
+            <span class="inline-block bg-sky-500 text-white font-bold px-4 py-1 rounded-full mb-6 text-sm uppercase tracking-widest animate-pulse">
+                Especial Mês das Mulheres
+            </span>
+            <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase leading-tight">
+                3º Pedal de <span class="gradient-text">Aniversário</span>
+            </h1>
+            <p class="text-2xl md:text-3xl font-bold text-sky-400 mb-12 italic">Prepare-se para o melhor pedal de Betim!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="card-blur p-4 rounded-2xl">
+                    <i class="fas fa-calendar-day text-sky-500 text-2xl mb-2"></i>
+                    <p class="block font-bold">15 de Março</p>
+                </div>
+                <div class="card-blur p-4 rounded-2xl">
+                    <i class="fas fa-clock text-sky-500 text-2xl mb-2"></i>
+                    <p class="block font-bold">Saída às 08h</p>
+                </div>
+                <div class="card-blur p-4 rounded-2xl">
+                    <i class="fas fa-map-marked-alt text-sky-500 text-2xl mb-2"></i>
+                    <p class="block font-bold">Betim / MG</p>
+                </div>
+            </div>
+
+            <a href="#inscricao" class="bg-sky-600 hover:bg-sky-500 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-2xl shadow-sky-900/40 uppercase">
+                Garantir Minha Vaga
+            </a>
+        </div>
+    </header>
+
+    <!-- Detalhes do Percurso -->
+    <section id="percurso" class="py-24 px-4 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">Detalhes do <span class="text-sky-500">Desafio</span></h2>
+                <p class="text-slate-400">Um trajeto planejado para diversão e superação.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="bg-sky-500/10 p-4 rounded-xl text-sky-400"><i class="fas fa-route fa-2x"></i></div>
+                        <div>
+                            <h3 class="font-bold text-2xl">18km de Extensão</h3>
+                            <p class="text-slate-400">Terreno 90% estradão, perfeito para quem está começando e para quem quer acelerar.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-sky-500/10 p-4 rounded-xl text-sky-400"><i class="fas fa-store-alt fa-2x"></i></div>
+                        <div>
+                            <h3 class="font-bold text-2xl">Concentração</h3>
+                            <p class="text-slate-400">Loja Bicicletando Store. Endereço: R. Jhenifer Naiara Aguiar, 1176 - Paulo Camilo/Betim.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="pt-6">
+                        <a href="https://www.strava.com/routes/3180972473624702550" target="_blank" class="inline-flex items-center gap-3 bg-[#fc4c02] hover:bg-[#e34402] text-white px-8 py-4 rounded-xl font-bold transition-all shadow-lg">
+                            <i class="fab fa-strava text-2xl"></i>
+                            VER ROTA NO STRAVA
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-blur p-8 rounded-3xl border-sky-500/30">
+                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fas fa-list-check text-sky-500"></i> O que está incluso:
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Café da Manhã Completo</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Medalha de Metal (Pós-prova)</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Carro de Apoio & Hidratação</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Sorteio de Brindes & Bike Aro 29</li>
+                        <li class="flex items-center gap-3 text-slate-300"><i class="fas fa-check text-green-500"></i> Fotos e Vídeos Profissionais</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção da Camisa -->
+    <section id="camisa" class="py-24 px-4 bg-slate-950">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-4xl font-black mb-4 uppercase tracking-tighter">O Manto do <span class="text-sky-500">Evento</span></h2>
+            <p class="text-slate-400 mb-12 max-w-2xl mx-auto">Tecnologia TrueLife Dry que absorve a umidade e oferece proteção UV. Exclusiva para o Kit Bruto.</p>
+            
+            <div class="max-w-4xl mx-auto relative group">
+                <!-- IMPORTANTE: Substitua o src pelo caminho da sua imagem no seu servidor -->
+                <div class="card-blur p-4 rounded-3xl overflow-hidden shadow-2xl border-sky-500/20">
+                    <img src="05.jpeg" alt="Modelo da Camisa Oficial" class="w-full h-auto rounded-2xl transform group-hover:scale-[1.01] transition-transform duration-700" onerror="this.src='https://placehold.co/800x600/1e293b/sky?text=Sua+Imagem+Aqui+(camisa.jpg)'">
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                    <div class="bg-slate-900 p-4 rounded-xl border border-white/5">
+                        <i class="fas fa-shield-virus text-sky-500 mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Bactericida</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-xl border border-white/5">
+                        <i class="fas fa-sun text-sky-500 mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Proteção UV</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-xl border border-white/5">
+                        <i class="fas fa-wind text-sky-500 mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Tecido Dry</p>
+                    </div>
+                    <div class="bg-slate-900 p-4 rounded-xl border border-white/5">
+                        <i class="fas fa-bolt text-sky-500 mb-2"></i>
+                        <p class="text-xs font-bold uppercase">Alta Qualidade</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Inscrição Section -->
+    <section id="inscricao" class="py-24 px-4 hero-bg">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black mb-4">FAÇA SUA INSCRIÇÃO</h2>
+                <p class="text-slate-300 text-lg">Inscrições com camisa (Kit Bruto) disponíveis até <span class="text-sky-400 font-bold">15/02</span></p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Kit Básico -->
+                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-slate-500 hover:scale-[1.02] transition-all">
+                    <h3 class="text-2xl font-bold mb-2">KIT BÁSICO</h3>
+                    <div class="text-5xl font-black mb-8 italic italic">R$ 60,00</div>
+                    
+                    <ul class="space-y-4 mb-12 flex-grow text-slate-300">
+                        <li class="flex items-center gap-3"><i class="fas fa-medal text-slate-500"></i> Medalha em Metal</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-coffee text-slate-500"></i> Café da Manhã Completo</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-id-badge text-slate-500"></i> Pulseira de Identificação</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-truck-medical text-slate-500"></i> Carro de Apoio</li>
+                    </ul>
+
+                    <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Básico* (R$ 60,00)." 
+                       target="_blank"
+                       class="w-full py-5 bg-white text-slate-900 rounded-xl font-black text-center hover:bg-sky-400 hover:text-white transition-all uppercase tracking-tighter">
+                        Inscrever-se no Básico
+                    </a>
+                </div>
+
+                <!-- Kit Bruto -->
+                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-sky-500 bg-sky-900/20 relative overflow-hidden hover:scale-[1.02] transition-all ring-2 ring-sky-500/20">
+                    <div class="absolute top-4 right-4 bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Recomendado</div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">KIT BRUTO</h3>
+                    <div class="text-5xl font-black mb-2 text-sky-400 italic">R$ 150,00</div>
+                    <p class="text-xs text-sky-300 font-bold mb-8 uppercase tracking-widest">Opção de Pagamento em 2x</p>
+                    
+                    <ul class="space-y-4 mb-12 flex-grow">
+                        <li class="flex items-center gap-3 font-bold text-sky-400"><i class="fas fa-tshirt"></i> Camisa Dry-Fit Oficial</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-medal"></i> Medalha em Metal</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-coffee text-sky-300"></i> Café da Manhã Completo</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-id-badge text-sky-300"></i> Pulseira de Identificação</li>
+                        <li class="flex items-center gap-3 text-sky-300"><i class="fas fa-truck-medical"></i> Carro de Apoio</li>
+                    </ul>
+
+                    <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Bruto* (R$ 150,00)." 
+                       target="_blank"
+                       class="w-full py-5 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-black text-center transition-all shadow-xl shadow-sky-600/30 uppercase tracking-tighter">
+                        Inscrever-se no Bruto
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-20 px-4 border-t border-white/5">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-2xl font-black mb-8 tracking-tighter">BICICLETANDO <span class="text-sky-500">STORE</span></h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 mb-16">
+                <div>
+                    <p class="text-slate-500 uppercase text-xs font-bold mb-2 tracking-widest">WhatsApp</p>
+                    <a href="https://wa.me/5531997906405" class="text-2xl font-bold hover:text-sky-400 transition-colors">(31) 99790-6405</a>
+                </div>
+                <div class="hidden md:block w-px h-12 bg-white/10"></div>
+                <div>
+                    <p class="text-slate-500 uppercase text-xs font-bold mb-2 tracking-widest">Localização</p>
+                    <p class="text-lg font-bold">Betim, Minas Gerais</p>
+                </div>
+            </div>
+            
+            <p class="text-slate-600 text-xs leading-relaxed max-w-lg mx-auto">
+                &copy; 2026 Bicicletando Store. Este é um evento de comemoração ao 3º aniversário da loja. Verifique o regulamento completo no WhatsApp.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Barra Fixa Mobile -->
+    <div class="fixed bottom-0 left-0 right-0 p-4 bg-slate-900/90 backdrop-blur-lg md:hidden flex gap-3 border-t border-white/10 z-[110]">
+        <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Básico* (R$ 60,00)." 
+           class="flex-1 bg-slate-800 text-white text-[10px] font-black py-4 rounded-xl text-center uppercase tracking-wider">Básico</a>
+        <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Bruto* (R$ 150,00)." 
+           class="flex-1 bg-sky-600 text-white text-[10px] font-black py-4 rounded-xl text-center uppercase tracking-wider shadow-lg shadow-sky-600/20">Kit Bruto</a>
+    </div>
+
+</body>
+</html>
