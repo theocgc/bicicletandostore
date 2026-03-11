@@ -46,6 +46,11 @@
             background: rgba(15, 23, 42, 0.6);
             pointer-events: none;
         }
+
+        .countdown-box {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -75,16 +80,36 @@
             <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase leading-tight">
                 3º Pedal de <span class="gradient-text">Aniversário</span>
             </h1>
-            <p class="text-2xl md:text-3xl font-bold text-sky-400 mb-12 italic">Prepare-se para o melhor pedal de Betim!</p>
+            <p class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 italic">Prepare-se para o melhor pedal de Betim!</p>
             
+            <!-- Cronômetro -->
+            <div id="countdown" class="grid grid-cols-4 gap-2 md:gap-4 mb-12 max-w-lg mx-auto">
+                <div class="countdown-box p-3 rounded-xl">
+                    <span id="days" class="block text-2xl md:text-4xl font-black text-sky-400">00</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest">Dias</span>
+                </div>
+                <div class="countdown-box p-3 rounded-xl">
+                    <span id="hours" class="block text-2xl md:text-4xl font-black text-sky-400">00</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest">Horas</span>
+                </div>
+                <div class="countdown-box p-3 rounded-xl">
+                    <span id="minutes" class="block text-2xl md:text-4xl font-black text-sky-400">00</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest">Min</span>
+                </div>
+                <div class="countdown-box p-3 rounded-xl">
+                    <span id="seconds" class="block text-2xl md:text-4xl font-black text-sky-400">00</span>
+                    <span class="text-[10px] uppercase font-bold tracking-widest">Seg</span>
+                </div>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                 <div class="card-blur p-4 rounded-2xl">
                     <i class="fas fa-calendar-day text-sky-500 text-2xl mb-2"></i>
                     <p class="block font-bold">15 de Março</p>
                 </div>
                 <div class="card-blur p-4 rounded-2xl">
-                    <i class="fas fa-clock text-sky-500 text-2xl mb-2"></i>
-                    <p class="block font-bold">Saída às 08h</p>
+                    <i class="fas fa-coffee text-sky-500 text-2xl mb-2"></i>
+                    <p class="block font-bold leading-tight">Café 06:30<br><span class="text-xs text-slate-400 uppercase">Saída 07:30</span></p>
                 </div>
                 <div class="card-blur p-4 rounded-2xl">
                     <i class="fas fa-map-marked-alt text-sky-500 text-2xl mb-2"></i>
@@ -114,6 +139,14 @@
                             <h3 class="font-bold text-2xl">25km de Extensão</h3>
                             <p class="text-slate-400 text-lg font-bold">460m de Altimetria</p>
                             <p class="text-slate-400">Terreno 90% estradão, perfeito para quem busca um desafio moderado e muita diversão.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="bg-sky-500/10 p-4 rounded-xl text-sky-400"><i class="fas fa-clock fa-2x"></i></div>
+                        <div>
+                            <h3 class="font-bold text-2xl">Cronograma</h3>
+                            <p class="text-slate-400">06:30 - Café da Manhã Completo</p>
+                            <p class="text-slate-400 font-bold text-sky-400">07:30 - Saída do Pedal</p>
                         </div>
                     </div>
                     <div class="flex items-start gap-5">
@@ -194,14 +227,18 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-black mb-4">FAÇA SUA INSCRIÇÃO</h2>
-                <p class="text-slate-300 text-lg">Aproveite as últimas vagas para o <span class="text-sky-400 font-bold">Kit Básico!</span></p>
+                <div class="bg-red-600/20 border border-red-500/50 inline-block px-6 py-2 rounded-full mb-4">
+                    <p class="text-red-400 font-black uppercase text-sm tracking-widest animate-pulse">
+                        <i class="fas fa-fire mr-2"></i> ÚLTIMAS VAGAS PARA O KIT BÁSICO!
+                    </p>
+                </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
                 <!-- Kit Básico (ATIVO) -->
-                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-sky-500 bg-sky-900/10 hover:scale-[1.02] transition-all ring-2 ring-sky-500/20">
-                    <div class="absolute top-4 right-4 bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Disponível</div>
+                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-sky-500 bg-sky-900/10 hover:scale-[1.02] transition-all ring-2 ring-sky-500/20 relative overflow-hidden">
+                    <div class="absolute top-4 right-4 bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest shadow-lg">Últimas Vagas</div>
                     <h3 class="text-2xl font-bold mb-2">KIT BÁSICO</h3>
                     <div class="text-5xl font-black mb-8 italic text-sky-400">R$ 60,00</div>
                     
@@ -271,13 +308,38 @@
         </div>
     </footer>
 
-    <!-- Barra Fixa Mobile (Apenas Básico agora) -->
+    <!-- Barra Fixa Mobile -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-slate-900/90 backdrop-blur-lg md:hidden flex gap-3 border-t border-white/10 z-[110]">
         <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Básico* (R$ 60,00)." 
-           class="flex-1 bg-sky-600 text-white text-xs font-black py-4 rounded-xl text-center uppercase tracking-wider shadow-lg shadow-sky-600/20">
-           Garantir Vaga no Kit Básico (R$ 60)
+           class="flex-1 bg-sky-600 text-white text-xs font-black py-4 rounded-xl text-center uppercase tracking-wider shadow-xl shadow-sky-600/20">
+           Últimas Vagas - Kit Básico (R$ 60)
         </a>
     </div>
+
+    <script>
+        // Configuração do Cronômetro
+        const eventDate = new Date("March 15, 2026 06:30:00").getTime();
+
+        const updateCountdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = d.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = h.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = m.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = s.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(updateCountdown);
+                document.getElementById("countdown").innerHTML = "<div class='col-span-4 text-sky-400 font-bold'>O EVENTO JÁ COMEÇOU!</div>";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
