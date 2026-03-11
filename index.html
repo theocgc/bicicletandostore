@@ -41,6 +41,11 @@
         .nav-link:hover {
             color: #38bdf8;
         }
+
+        .sold-out-overlay {
+            background: rgba(15, 23, 42, 0.6);
+            pointer-events: none;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -189,51 +194,55 @@
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-black mb-4">FAÇA SUA INSCRIÇÃO</h2>
-                <p class="text-slate-300 text-lg">Inscrições com camisa (Kit Bruto) disponíveis até <span class="text-sky-400 font-bold">15/02</span></p>
+                <p class="text-slate-300 text-lg">Aproveite as últimas vagas para o <span class="text-sky-400 font-bold">Kit Básico!</span></p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 
-                <!-- Kit Básico -->
-                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-slate-500 hover:scale-[1.02] transition-all">
+                <!-- Kit Básico (ATIVO) -->
+                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-sky-500 bg-sky-900/10 hover:scale-[1.02] transition-all ring-2 ring-sky-500/20">
+                    <div class="absolute top-4 right-4 bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Disponível</div>
                     <h3 class="text-2xl font-bold mb-2">KIT BÁSICO</h3>
-                    <div class="text-5xl font-black mb-8 italic">R$ 60,00</div>
+                    <div class="text-5xl font-black mb-8 italic text-sky-400">R$ 60,00</div>
                     
                     <ul class="space-y-4 mb-12 flex-grow text-slate-300">
-                        <li class="flex items-center gap-3"><i class="fas fa-medal text-slate-500"></i> Medalha em Metal</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-coffee text-slate-500"></i> Café da Manhã Completo</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-id-badge text-slate-500"></i> Pulseira de Identificação</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-truck-medical text-slate-500"></i> Carro de Apoio</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-medal text-sky-500"></i> Medalha em Metal</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-coffee text-sky-500"></i> Café da Manhã Completo</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-id-badge text-sky-500"></i> Pulseira de Identificação</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-truck-medical text-sky-500"></i> Carro de Apoio</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-gift text-sky-500"></i> Participação nos Sorteios</li>
                     </ul>
 
                     <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Básico* (R$ 60,00)." 
                        target="_blank"
-                       class="w-full py-5 bg-white text-slate-900 rounded-xl font-black text-center hover:bg-sky-400 hover:text-white transition-all uppercase tracking-tighter">
-                        Inscrever-se no Básico
+                       class="w-full py-5 bg-sky-600 text-white rounded-xl font-black text-center hover:bg-sky-500 transition-all uppercase tracking-tighter shadow-xl shadow-sky-600/30">
+                        Inscrever-se agora
                     </a>
                 </div>
 
-                <!-- Kit Bruto -->
-                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-sky-500 bg-sky-900/20 relative overflow-hidden hover:scale-[1.02] transition-all ring-2 ring-sky-500/20">
-                    <div class="absolute top-4 right-4 bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Recomendado</div>
+                <!-- Kit Bruto (ESGOTADO) -->
+                <div class="card-blur p-8 md:p-12 rounded-3xl flex flex-col border-t-4 border-slate-700 relative overflow-hidden opacity-60 grayscale-[0.5]">
+                    <div class="absolute inset-0 sold-out-overlay flex items-center justify-center z-10">
+                        <div class="rotate-[-15deg] border-4 border-red-500 text-red-500 px-6 py-2 text-3xl font-black uppercase tracking-widest bg-slate-900/90 shadow-2xl">
+                            Esgotado
+                        </div>
+                    </div>
                     
                     <h3 class="text-2xl font-bold mb-2">KIT BRUTO</h3>
-                    <div class="text-5xl font-black mb-2 text-sky-400 italic">R$ 150,00</div>
-                    <p class="text-xs text-sky-300 font-bold mb-8 uppercase tracking-widest">Opção de Pagamento em 2x</p>
+                    <div class="text-5xl font-black mb-2 text-slate-500 italic">R$ 150,00</div>
+                    <p class="text-xs text-slate-500 font-bold mb-8 uppercase tracking-widest">Incluía Camisa Dry-Fit</p>
                     
-                    <ul class="space-y-4 mb-12 flex-grow">
-                        <li class="flex items-center gap-3 font-bold text-sky-400"><i class="fas fa-tshirt"></i> Camisa Dry-Fit Oficial</li>
+                    <ul class="space-y-4 mb-12 flex-grow text-slate-500">
+                        <li class="flex items-center gap-3"><i class="fas fa-tshirt"></i> Camisa Dry-Fit Oficial</li>
                         <li class="flex items-center gap-3"><i class="fas fa-medal"></i> Medalha em Metal</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-coffee text-sky-300"></i> Café da Manhã Completo</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-id-badge text-sky-300"></i> Pulseira de Identificação</li>
-                        <li class="flex items-center gap-3 text-sky-300"><i class="fas fa-truck-medical"></i> Carro de Apoio</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-coffee"></i> Café da Manhã</li>
+                        <li class="flex items-center gap-3"><i class="fas fa-id-badge"></i> Identificação</li>
                     </ul>
 
-                    <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Bruto* (R$ 150,00)." 
-                       target="_blank"
-                       class="w-full py-5 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-black text-center transition-all shadow-xl shadow-sky-600/30 uppercase tracking-tighter">
-                        Inscrever-se no Bruto
-                    </a>
+                    <button disabled
+                       class="w-full py-5 bg-slate-800 text-slate-500 rounded-xl font-black text-center uppercase tracking-tighter cursor-not-allowed">
+                        Vagas Encerradas
+                    </button>
                 </div>
 
             </div>
@@ -262,12 +271,12 @@
         </div>
     </footer>
 
-    <!-- Barra Fixa Mobile -->
+    <!-- Barra Fixa Mobile (Apenas Básico agora) -->
     <div class="fixed bottom-0 left-0 right-0 p-4 bg-slate-900/90 backdrop-blur-lg md:hidden flex gap-3 border-t border-white/10 z-[110]">
         <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Básico* (R$ 60,00)." 
-           class="flex-1 bg-slate-800 text-white text-[10px] font-black py-4 rounded-xl text-center uppercase tracking-wider">Básico</a>
-        <a href="https://wa.me/5531997906405?text=Olá! Gostaria de fazer minha inscrição no 3º Pedal de Aniversário Bicicletando Store. Escolhi o *Kit Bruto* (R$ 150,00)." 
-           class="flex-1 bg-sky-600 text-white text-[10px] font-black py-4 rounded-xl text-center uppercase tracking-wider shadow-lg shadow-sky-600/20">Kit Bruto</a>
+           class="flex-1 bg-sky-600 text-white text-xs font-black py-4 rounded-xl text-center uppercase tracking-wider shadow-lg shadow-sky-600/20">
+           Garantir Vaga no Kit Básico (R$ 60)
+        </a>
     </div>
 
 </body>
