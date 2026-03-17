@@ -125,52 +125,40 @@
                 <!-- Vídeo 1 -->
                 <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
                     <div class="video-container rounded-2xl">
-                        <video controls preload="metadata" poster="galeria1.jpg">
+                        <video controls preload="metadata">
                             <source src="drone1.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos.
                         </video>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Largada e Concentração</h3>
                     </div>
                 </div>
 
                 <!-- Vídeo 2 -->
                 <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
                     <div class="video-container rounded-2xl">
-                        <video controls preload="metadata" poster="galeria2.jpg">
+                        <video controls preload="metadata">
                             <source src="drone2.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos.
                         </video>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Aventura no Estradão</h3>
                     </div>
                 </div>
 
                 <!-- Vídeo 3 -->
                 <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
                     <div class="video-container rounded-2xl">
-                        <video controls preload="metadata" poster="galeria3.jpg">
+                        <video controls preload="metadata">
                             <source src="drone3.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos.
                         </video>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Superação e Altimetria</h3>
                     </div>
                 </div>
 
                 <!-- Vídeo 4 -->
                 <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
                     <div class="video-container rounded-2xl">
-                        <video controls preload="metadata" poster="galeria4.jpg">
+                        <video controls preload="metadata">
                             <source src="drone4.mp4" type="video/mp4">
                             Seu navegador não suporta vídeos.
                         </video>
-                    </div>
-                    <div class="p-4 text-center">
-                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Chegada e Celebração</h3>
                     </div>
                 </div>
             </div>
@@ -220,12 +208,15 @@
             </div>
 
             <div class="card-blur p-8 md:p-12 rounded-3xl border border-sky-500/20 shadow-2xl">
+                <!-- Usando Formspree para envio de e-mail gratuito -->
                 <form action="https://formspree.io/f/bicicletandostore@gmail.com" method="POST" class="space-y-6">
+                    <!-- Nome Opcional -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Seu Nome (Opcional)</label>
                         <input type="text" name="nome" placeholder="Como quer ser chamado?" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white">
                     </div>
 
+                    <!-- Nota -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Qual nota você daria para o evento? (1 a 5)</label>
                         <div class="flex gap-4 justify-between">
@@ -252,6 +243,7 @@
                         </div>
                     </div>
 
+                    <!-- Comentários -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">O que podemos melhorar? (Críticas e Sugestões)</label>
                         <textarea name="comentario" rows="4" placeholder="Sua opinião sincera..." required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white"></textarea>
