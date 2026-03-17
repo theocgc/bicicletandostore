@@ -44,10 +44,17 @@
 
         .gallery-item {
             transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
         }
         .gallery-item:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             z-index: 10;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -80,7 +87,7 @@
             <p class="text-2xl md:text-3xl font-bold text-sky-400 mb-8 italic">Obrigado a todos os participantes do 3º Pedal de Aniversário.</p>
             
             <div class="flex flex-col md:flex-row gap-4 justify-center mt-8">
-                <a href="https://drive.google.com/drive/folders/bc1qmz00uvzyxx0evgw6q06sc2qqy05t6jjqu5t3sd" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-2xl shadow-sky-900/40 uppercase">
+                <a href="https://1drv.ms/f/c/daacdfad203c4f90/IgBmubGlzS-RRY7fbpebyKmNAQEcPd_VdO0kts-9Sl0K2t8" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-2xl shadow-sky-900/40 uppercase">
                     Ver Fotos do Pedal
                 </a>
                 <a href="#avaliacao" class="bg-white/10 hover:bg-white/20 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 border border-white/20 uppercase">
@@ -96,29 +103,29 @@
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
                     <h2 class="text-4xl font-black uppercase tracking-tighter italic">Galeria de <span class="text-sky-500">Recordações</span></h2>
-                    <p class="text-slate-400 mt-2">Confira os cliques desse dia inesquecível em Betim.</p>
+                    <p class="text-slate-400 mt-2">Confira os destaques desse dia. Clique no botão ao lado para ver todas as fotos.</p>
                 </div>
-                <a href="https://drive.google.com/drive/folders/bc1qmz00uvzyxx0evgw6q06sc2qqy05t6jjqu5t3sd" target="_blank" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-black text-sm uppercase hover:bg-sky-500 transition-all shadow-xl flex items-center gap-2">
-                    <i class="fas fa-external-link-alt"></i> ABRIR PASTA NO DRIVE
+                <a href="https://1drv.ms/f/c/daacdfad203c4f90/IgBmubGlzS-RRY7fbpebyKmNAQEcPd_VdO0kts-9Sl0K2t8" target="_blank" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-black text-sm uppercase hover:bg-sky-500 transition-all shadow-xl flex items-center gap-2">
+                    <i class="fas fa-external-link-alt"></i> ABRIR ÁLBUM NO ONEDRIVE
                 </a>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur flex flex-col items-center justify-center border border-white/5">
-                    <i class="fas fa-images text-sky-500/40 text-4xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase text-slate-500">Fotos Gerais</span>
+                <!-- Foto 1 -->
+                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur border border-white/5">
+                    <img src="galeria1.jpg" alt="Destaque Pedal 1" onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-images text-sky-500/20 text-4xl mb-2\'></i><span class=\'text-[10px] font-bold uppercase text-slate-500\'>Foto 1</span></div>'">
                 </div>
-                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur flex flex-col items-center justify-center border border-white/5">
-                    <i class="fas fa-drone text-sky-500/40 text-4xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase text-slate-500">Aéreas (Drone)</span>
+                <!-- Foto 2 -->
+                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur border border-white/5">
+                    <img src="galeria2.jpg" alt="Destaque Pedal 2" onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-drone text-sky-500/20 text-4xl mb-2\'></i><span class=\'text-[10px] font-bold uppercase text-slate-500\'>Foto 2</span></div>'">
                 </div>
-                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur flex flex-col items-center justify-center border border-white/5">
-                    <i class="fas fa-video text-sky-500/40 text-4xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase text-slate-500">Vídeos Melhores Momentos</span>
+                <!-- Foto 3 -->
+                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur border border-white/5">
+                    <img src="galeria3.jpg" alt="Destaque Pedal 3" onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-video text-sky-500/20 text-4xl mb-2\'></i><span class=\'text-[10px] font-bold uppercase text-slate-500\'>Foto 3</span></div>'">
                 </div>
-                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur flex flex-col items-center justify-center border border-white/5">
-                    <i class="fas fa-camera-retro text-sky-500/40 text-4xl mb-2"></i>
-                    <span class="text-[10px] font-bold uppercase text-slate-500">Retratos</span>
+                <!-- Foto 4 -->
+                <div class="gallery-item bg-slate-800 rounded-2xl aspect-square overflow-hidden card-blur border border-white/5">
+                    <img src="galeria4.jpg" alt="Destaque Pedal 4" onerror="this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full\'><i class=\'fas fa-camera-retro text-sky-500/20 text-4xl mb-2\'></i><span class=\'text-[10px] font-bold uppercase text-slate-500\'>Foto 4</span></div>'">
                 </div>
             </div>
         </div>
@@ -133,15 +140,12 @@
             </div>
 
             <div class="card-blur p-8 md:p-12 rounded-3xl border border-sky-500/20 shadow-2xl">
-                <!-- Usando Formspree para envio de e-mail gratuito -->
                 <form action="https://formspree.io/f/bicicletandostore@gmail.com" method="POST" class="space-y-6">
-                    <!-- Nome Opcional -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Seu Nome (Opcional)</label>
-                        <input type="text" name="nome" placeholder="Como quer ser chamado?" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors">
+                        <input type="text" name="nome" placeholder="Como quer ser chamado?" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white">
                     </div>
 
-                    <!-- Nota -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Qual nota você daria para o evento? (1 a 5)</label>
                         <div class="flex gap-4 justify-between">
@@ -168,10 +172,9 @@
                         </div>
                     </div>
 
-                    <!-- Comentários -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">O que podemos melhorar? (Críticas e Sugestões)</label>
-                        <textarea name="comentario" rows="4" placeholder="Sua opinião sincera..." required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors"></textarea>
+                        <textarea name="comentario" rows="4" placeholder="Sua opinião sincera..." required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white"></textarea>
                     </div>
 
                     <input type="hidden" name="_subject" value="Nova Avaliação: 3º Pedal de Aniversário">
