@@ -51,10 +51,25 @@
             transform: scale(1.03);
             z-index: 10;
         }
-        .gallery-item img {
+        .gallery-item img, .gallery-item video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -66,6 +81,7 @@
             <div class="font-black text-xl tracking-tighter uppercase">BICICLETANDO <span class="text-sky-500">STORE</span></div>
             <div class="hidden md:flex gap-8 font-bold text-sm uppercase tracking-wider">
                 <a href="#inicio" class="nav-link transition-colors">Início</a>
+                <a href="#videos" class="nav-link transition-colors">Vídeos</a>
                 <a href="#galeria" class="nav-link transition-colors">Galeria</a>
                 <a href="#avaliacao" class="nav-link transition-colors text-sky-400">Avaliar Evento</a>
             </div>
@@ -90,20 +106,84 @@
                 <a href="https://1drv.ms/f/c/daacdfad203c4f90/IgBmubGlzS-RRY7fbpebyKmNAQEcPd_VdO0kts-9Sl0K2t8" target="_blank" class="bg-sky-600 hover:bg-sky-500 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 shadow-2xl shadow-sky-900/40 uppercase">
                     Ver Fotos do Pedal
                 </a>
-                <a href="#avaliacao" class="bg-white/10 hover:bg-white/20 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 border border-white/20 uppercase">
-                    Dar Feedback
+                <a href="#videos" class="bg-white/10 hover:bg-white/20 text-white font-black py-5 px-12 rounded-full text-xl transition-all transform hover:scale-105 border border-white/20 uppercase">
+                    Ver Vídeos Drone
                 </a>
             </div>
         </div>
     </header>
 
+    <!-- Seção de Vídeos do Drone -->
+    <section id="videos" class="py-24 px-4 bg-slate-900 border-b border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-black uppercase tracking-tighter italic">Imagens <span class="text-sky-500">Aéreas</span></h2>
+                <p class="text-slate-400 mt-2">Reviva a emoção do pedal através das lentes dos nossos drones.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Vídeo 1 -->
+                <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
+                    <div class="video-container rounded-2xl">
+                        <video controls preload="metadata" poster="galeria1.jpg">
+                            <source src="drone1.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Largada e Concentração</h3>
+                    </div>
+                </div>
+
+                <!-- Vídeo 2 -->
+                <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
+                    <div class="video-container rounded-2xl">
+                        <video controls preload="metadata" poster="galeria2.jpg">
+                            <source src="drone2.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Aventura no Estradão</h3>
+                    </div>
+                </div>
+
+                <!-- Vídeo 3 -->
+                <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
+                    <div class="video-container rounded-2xl">
+                        <video controls preload="metadata" poster="galeria3.jpg">
+                            <source src="drone3.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Superação e Altimetria</h3>
+                    </div>
+                </div>
+
+                <!-- Vídeo 4 -->
+                <div class="card-blur p-2 rounded-3xl border border-white/5 overflow-hidden shadow-2xl">
+                    <div class="video-container rounded-2xl">
+                        <video controls preload="metadata" poster="galeria4.jpg">
+                            <source src="drone4.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-sky-400 uppercase text-xs tracking-widest italic">Chegada e Celebração</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Galeria de Fotos -->
-    <section id="galeria" class="py-24 px-4 bg-slate-900">
+    <section id="galeria" class="py-24 px-4 bg-slate-950">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                 <div>
                     <h2 class="text-4xl font-black uppercase tracking-tighter italic">Galeria de <span class="text-sky-500">Recordações</span></h2>
-                    <p class="text-slate-400 mt-2">Confira os destaques desse dia. Clique no botão ao lado para ver todas as fotos.</p>
+                    <p class="text-slate-400 mt-2">Destaques fotográficos do evento. Clique para acessar o álbum completo.</p>
                 </div>
                 <a href="https://1drv.ms/f/c/daacdfad203c4f90/IgBmubGlzS-RRY7fbpebyKmNAQEcPd_VdO0kts-9Sl0K2t8" target="_blank" class="bg-sky-600 text-white px-8 py-4 rounded-xl font-black text-sm uppercase hover:bg-sky-500 transition-all shadow-xl flex items-center gap-2">
                     <i class="fas fa-external-link-alt"></i> ABRIR ÁLBUM NO ONEDRIVE
@@ -132,7 +212,7 @@
     </section>
 
     <!-- Formulário de Avaliação -->
-    <section id="avaliacao" class="py-24 px-4 bg-slate-950">
+    <section id="avaliacao" class="py-24 px-4 bg-slate-900 border-t border-white/5">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
                 <h2 class="text-4xl font-black uppercase tracking-tighter mb-4">Sua <span class="text-sky-500">Opinião</span> importa</h2>
