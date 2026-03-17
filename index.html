@@ -208,9 +208,16 @@
             </div>
 
             <div class="card-blur p-8 md:p-12 rounded-3xl border border-sky-500/20 shadow-2xl">
-                <!-- Endpoint Formspree atualizado -->
+                <!-- FORMULÁRIO ATUALIZADO COM OS CAMPOS PADRÃO DO FORMSPREE -->
                 <form action="https://formspree.io/f/xaqpldky" method="POST" class="space-y-6">
-                    <!-- Nome Opcional -->
+                    
+                    <!-- E-mail (Obrigatório para o Formspree) -->
+                    <div>
+                        <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Seu E-mail (Obrigatório)</label>
+                        <input type="email" name="email" required placeholder="seu@email.com" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white">
+                    </div>
+
+                    <!-- Nome (Opcional) -->
                     <div>
                         <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Seu Nome (Opcional)</label>
                         <input type="text" name="nome" placeholder="Como quer ser chamado?" class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white">
@@ -243,13 +250,14 @@
                         </div>
                     </div>
 
-                    <!-- Comentários -->
+                    <!-- Mensagem/Comentários -->
                     <div>
-                        <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">O que podemos melhorar? (Críticas e Sugestões)</label>
-                        <textarea name="comentario" rows="4" placeholder="Sua opinião sincera..." required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white"></textarea>
+                        <label class="block text-xs font-black uppercase tracking-widest text-slate-500 mb-2">Sua mensagem ou sugestão</label>
+                        <textarea name="message" rows="4" placeholder="Sua opinião sincera..." required class="w-full bg-slate-900 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-sky-500 transition-colors text-white"></textarea>
                     </div>
 
-                    <input type="hidden" name="_subject" value="Nova Avaliação: 3º Pedal de Aniversário">
+                    <!-- Título do Assunto no E-mail -->
+                    <input type="hidden" name="_subject" value="Nova Avaliação do 3º Pedal de Aniversário">
 
                     <button type="submit" class="w-full py-5 bg-sky-600 hover:bg-sky-500 text-white rounded-xl font-black text-center transition-all shadow-xl shadow-sky-600/30 uppercase tracking-tighter">
                         Enviar Avaliação
